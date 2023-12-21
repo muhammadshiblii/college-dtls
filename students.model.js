@@ -3,8 +3,6 @@ const student_schema=new mongoose.Schema({
     staff:{type:String},
     studentid:{type:String},
     name:{type:String},
-    username:{type:String},
-    password:{type:String},
     email:{type:String},
     phone:{type:String},
     address:{type:String},
@@ -13,12 +11,20 @@ const student_schema=new mongoose.Schema({
     batch:{type:String},
     sem:{type:String},
     attandance:{type:String},
-    internalChe:{type:String},
-    internalPhy:{type:String},
-    internalMath:{type:String},
+
+    internal:{
+        internalChe:{type:String},
+        internalPhy:{type:String},
+        internalMath:{type:String},
+    },
+    test:{
+           
     testChe:{type:String},
     testPhy:{type:String},
     testMath:{type:String},
+    },
+
+ 
     photo:{type:String}
 })
 

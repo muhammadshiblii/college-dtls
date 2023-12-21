@@ -1,5 +1,5 @@
 .stafflogin-main{
-    background: #2e3047;
+    background: #efebe0;
     height: 92vh;
     padding-top: 9%;
 }
@@ -7,8 +7,8 @@
     text-align: center;
 }
 .stafflogin-card{
-    border: 2px solid #53d3d1;
-    background-color:#2e3047 ;
+    border: 2px solid #5d072b;
+    /* background-color:#2e3047 ; */
     width: 30%;
     height: auto;
     margin: auto;
@@ -16,7 +16,7 @@
     padding: 20px;
 }
 .stafflogin-card h4{
-    color: #53d3d1;
+    color: #074f4e;
     font-weight: 800;
 }
 .staff-login-form{
@@ -58,9 +58,9 @@
 .forgot-pwd{
     font-size: 12px;
     /* text-decoration: none; */
-    color: #53d3d1;
+    color: #023938;
     text-align: right;
 }
 .forgot-pwd:hover{
-    color: #53d3d1;
+    color: #0b7f7d;
 }

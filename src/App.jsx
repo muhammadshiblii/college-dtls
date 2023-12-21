@@ -5,7 +5,6 @@ import Home from './Components/Body/Home/Home'
 import AdminLogin from './Components/Body/AdminLogin/AdminLogin'
 import StaffLogin from './Components/Body/StaffLogin/StaffLogin'
 import StaffReg from './Components/Body/StaffReg/StaffReg'
-import Adminpannel from './Components/Body/Adminpannel/Adminpannel'
 import Adminreg from './Components/Body/Adminreg/Adminreg'
 import Adminhome from './Components/Body/Adminhome/Adminhome'
 import Studentreg from './Components/Body/Studentreg/Studentreg'
@@ -17,19 +16,26 @@ import Staffdetails from './Components/Body/Staffdetails/Staffdetails'
 import StaffForgotusername from './Components/staffForgoteusername/StaffForgotusername'
 import StaffForgotPwd from './Components/StaffForgotPwd/StaffForgotPwd'
 import ViewFullStudents from './Components/ViewFullStudents/ViewFullStudents'
+import StudentDetails from './Components/Body/Studentdetails/Studentdetails'
+import StudentEdit from './Components/Body/StudentEdit/StudentEdit'
+import Main from './Components/Main/Main'
+import AdminsideStudFullDetails from './Components/Body/AdminSideStudFFullDetails/AdminSideStudFFullDetails'
+import AdminSideStudentDetails from './Components/Body/AdminSideStudentDetails/AdminSideStudentDetails'
+// import StudentHome from './Components/StudentHome/StudentHome'
+import Studenthomefulldata from './Components/StudentHome/StudentHome'
 
 function App() {
   return (
     <>
     <BrowserRouter>
-    <Navbar/>
+    {/* <Navbar/> */}
     <Routes>
-      <Route path='/' Component={Home}/>
+      <Route path='/' Component={Main}/>
+      <Route path='/home' Component={Home}/>
       <Route path='/adminlogin' Component={AdminLogin}/>
       <Route path='/stafflogin' Component={StaffLogin}/>
       <Route path='/staffreg' Component={StaffReg}/>
       <Route path='/adminregister' Component={Adminreg}/>
-      <Route path='/adminpannel' Component={Adminpannel}/>
       <Route path='/adminhome' Component={Adminhome}/>
       <Route path='/studentreg' Component={Studentreg}/>
       <Route path='/studentlogin' Component={Studentlogin}/>
@@ -40,6 +46,11 @@ function App() {
       <Route path='/staffedit/:id' Component={Staffedit}/>
       <Route path='/staffforgotpwd' Component={StaffForgotPwd}/>
       <Route path='/viewfullstudents' Component={ViewFullStudents}/>
+      <Route path='/studentdetails/:id' Component={StudentDetails}/>
+      <Route path='/studentedit/:id' Component={StudentEdit}/>
+      <Route path='/studentfullhome' Component={Studenthomefulldata}/>
+      <Route path='/adminsidefullstudent' Component={AdminSideStudentDetails}/>
+      <Route path='/adminstudfulldetails/:id' Component={AdminsideStudFullDetails}/>
     </Routes>
     
     </BrowserRouter>

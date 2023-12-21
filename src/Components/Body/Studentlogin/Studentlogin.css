@@ -1,6 +1,6 @@
 .studentlogin-main{
-    background: #2e3047;
-    height: 92vh;
+    background: #5c6090;
+    height:100vh;
     padding-top: 9%;
 }
 .student-login-card-heading{
@@ -8,7 +8,7 @@
 }
 .studentlogin-card{
     border: 2px solid #53d3d1;
-    background-color:#2e3047 ;
+    background-color:#23264b ;
     width: 30%;
     height: auto;
     margin: auto;
@@ -16,7 +16,7 @@
     padding: 20px;
 }
 .studentlogin-card h4{
-    color: #53d3d1;
+    color: yellow;
     font-weight: 800;
 }
 .student-login-form{
@@ -28,12 +28,13 @@
     border: 2px solid #53d3d1 !important ;
     margin-top: 20px;
     width: 60%;
+    color: aliceblue;
     height: 40px;
     padding-left: 10px;
     border-radius: 5px;
 }
 .studentlogin-card button{
-    background-color: #53d3d1;
+    background-color: rgb(255, 225, 0);
     border: 2px solid #53d3d1 ;
     color: #2e3047;
     font-weight: 800;

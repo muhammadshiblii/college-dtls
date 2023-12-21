@@ -1,4 +1,5 @@
 import { Router } from "express";
+import Auth from "./auth.js";
 import * as controller from "./controller.js"
 const router=Router();
 router.route("/addadmin").post(controller.addAdmin);
@@ -14,6 +15,10 @@ router.route("/forgotepwd/:phone").patch(controller.staffFrgtPwd);
 router.route("/addstudent").post(controller.addStudent)
 router.route("/getallstuds").get(controller.getStudents)
 router.route("/deletestudent/:id").delete(controller.deleteStudent);
+router.route("/getstudentdetails/:id").post(controller.getStudentDetails);
+router.route("/editstudentdetails/:id").patch(controller.EditStudentDetails);
+router.route("/studentlogin").post(controller.studentLogin);
+router.route("/getdetsilsloginedstudent").get(Auth,controller.GetDtsilsLoginedStudent);
 
 
 export default router;

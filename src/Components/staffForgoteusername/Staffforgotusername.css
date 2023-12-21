@@ -1,7 +1,7 @@
 .staff-forgot-card{
     width: 27%;
     height: auto;
-    border: 2px solid #53d3d1;
+    border: 2px solid #540633;
     margin: auto;
     margin-top: 140px;
     border-radius: 6px;
@@ -39,7 +39,7 @@
 }
 .staff-forgot-card h5{
     text-align: center;
-    color: #53d3d1;
+    color: #540633;
 }
 .stf-frgt-usr{
     background-color: #53d3d1;

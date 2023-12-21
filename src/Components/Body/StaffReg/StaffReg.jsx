@@ -116,7 +116,7 @@ const StaffReg = () => {
               <input type="text" placeholder='Expirience' name='expirience'  onChange={Getdata} />
               <input type="text" placeholder='Address' onChange={Getdata} name='address'/></div>
             <div>
-              <input type="file" placeholder='Image' className='file' onChange={Upload} name='photo'/>
+              <input type="file" placeholder='Image' className='filee' onChange={Upload} name='photo'/>
             </div>
             <button onClick={registerStaff}>Register</button>
             </form>

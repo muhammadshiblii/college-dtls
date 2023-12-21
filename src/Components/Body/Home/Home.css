@@ -6,9 +6,66 @@ font-family: 'Poppins', sans-serif; */
 body{
     font-family: 'Poppins', sans-serif; 
 }
+.navstdhome{
+    display: flex;
+    background-color:#04223f;
+    height: 79px;
+ }
+ .navfirst{
+     display: flex;
+     margin-left: 5%;
+     justify-content: center;
+     align-items: center;
+     color: aliceblue;
+     gap: 10px;
+     font-family:sans-serif,Georgia, 'Times New Roman', Times, serif;
+ }
+ .navfirst i{
+     color:black;
+     background-color: yellow;
+     padding: 12px;
+     font-size: 20px;
+     border-radius: 50px;
+ }
+ #homeactive{
+     color: rgb(255, 208, 0);
+     text-decoration: none;
+ }
+ .navmid{
+     display: flex;
+     margin-left: 13%;
+     color: aliceblue;
+     justify-content: center;
+     align-items: center;
+     gap: 25px;
+     font-family:sans-serif,Georgia, 'Times New Roman', Times, serif;
+ }
+ .navmid h6:hover{
+   color:#00ff91;
+ }
+ .navlast{
+     margin-left: 13%;
+     display: flex;
+   
+     justify-content: center;
+     align-items: center;
+ }
+ .navlast button{
+     color:#04203c;
+     font-weight: 600;
+     background-color: #ffd000;
+     padding: 8px 18px;
+     border-radius: 2%;
+     border: none;
+ }
+ .navlast button:hover{
+   background-color: #e5ff00;
+ }
+ 
 .home-main{
     display: flex;
-    background: #2e3047;
+    background: #08345d;
+    height:100vh;
 }
 .home-main-left{
     width: 60%;
@@ -18,7 +75,7 @@ body{
 .clg-name{
     /* background-color: black; */
     padding: 40px;
-    border-left: 3px solid #53d3d1;
+    /* border-left: 3px solid #5f062c; */
 }
 .home-main-right{
     width: 40%;
@@ -32,31 +89,40 @@ body{
     font-weight: 900;
     letter-spacing: 2px;
     font-size: 50px;
-    color: #53d3d1;
+    color: aliceblue;
+    margin-bottom: 30px;
+}
+.home-main-left .head{
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color:aliceblue;
     margin-bottom: 40px;
 }
 .home-contctus-btn,.home-aboutus-btn{
     text-decoration: none;
-    color: #53d3d1;
+    color:rgb(65, 8, 8);
     padding: 9px 20px;
     margin-right: 20px;
-    border: 2px solid #53d3d1;
+    background-color: #8cff00;
     border-radius: 40px;
     transition: .3s;
     font-weight: 800;
     letter-spacing: 1px;
 }
 .home-aboutus-btn:hover{
-    background-color: #53d3d1;
-    color: #2e3047;
+    background-color: #e5ff00;
+    color:rgb(65, 8, 8);
+    text-decoration: none;
 }
 .home-contctus-btn:hover{
-    background-color: #53d3d1;
-    color: #2e3047;
+    background-color: #e5ff00;
+    color:rgb(65, 8, 8);
+    text-decoration: none;
 }
 
 .home-actype-main-card{
-   border: 3px solid  #53d3d1;
+   /* border: 3px solid  #53d3d1; */
    border-radius: 10px;
     height: auto;
     text-align: center;
@@ -64,20 +130,19 @@ body{
     padding-bottom: 40px;
     width: 400px;
 }
-.home-actype-main-card h3{
+/* .home-actype-main-card h3{
     color: #53d3d1;
     font-weight: 700;
-}
+} */
 .home-btns{
     margin-bottom: 30px;
     margin-top: 30px;
 }
 .home-admin-btn,.home-staff-btn,.home-student-btn{
-    background-color: #53d3d1;
+    background-color:#ffd000;
     margin-bottom: 10px !important;
     padding: 7px 60px;
-    border: 2px solid #53d3d1;
-    color: #2e3047;
+    color: rgb(79, 8, 8);
     font-weight: 700;
     width: 80%;
     text-decoration: none;
@@ -90,16 +155,19 @@ body{
     padding: 7px 72px;
 }
 .home-admin-btn:hover{
-    background-color: transparent;
-    color: #53d3d1;
+    background-color: #e6ff00;
+    color: rgb(79,8,8);
+    text-decoration: none;
 }
 .home-staff-btn:hover{
-    background-color: transparent;
-    color: #53d3d1;
+    background-color: #e6ff00;
+    color: rgb(79,8,8);
+    text-decoration: none;
 }
 .home-student-btn:hover{
-    background-color: transparent;
-    color: #53d3d1;
+    background-color: #e6ff00;
+    color: rgb(79,8,8);
+    text-decoration: none;
 }
 
 @media (min-width:300px) and (max-width:575.98px){

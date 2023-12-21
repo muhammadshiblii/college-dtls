@@ -3,7 +3,7 @@ import './Studentreg.css'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 const Studentreg = () => {
-  const navigate=useNavigate()
+  const navigate = useNavigate()
   const [username, setUsername] = useState("");
   useEffect(() => {
     const storedUsername = localStorage.getItem("username");
@@ -12,143 +12,143 @@ const Studentreg = () => {
     }
   }, []);
 
-  let Photo="";
-  const [val,setVal]=useState({
-    staff:"",
-    studentid:"",
-    name:"",
-    username:"",
-    password:"",
-    email:"",
-    phone:"",
-    address:"",
-    dob:"",
-    course:"",
-    batch:"",
-    sem:"",
-    attandance:"",
-    internalChe:"",
-    internalPhy:"",
-    internalMath:"",
-    testChe:"",
-    testPhy:"",
-    testMath:"",
-    photo:""
+  let Photo = "";
+  const [val, setVal] = useState({
+    staff: "",
+    studentid: "",
+    name: "",
+    username: "",
+    password: "",
+    email: "",
+    phone: "",
+    address: "",
+    dob: "",
+    course: "",
+    batch: "",
+    sem: "",
+    attandance: "",
+    internalChe: "",
+    internalPhy: "",
+    internalMath: "",
+    testChe: "",
+    testPhy: "",
+    testMath: "",
+    photo: ""
   })
 
   function convertToBase64(file) {
     return new Promise((resolve, reject) => {
-        const fileReader = new FileReader();
-        fileReader.readAsDataURL(file);
-  
-        fileReader.onload = () => {
-            resolve(fileReader.result)
-        }
-        fileReader.onerror = (error) => {
-            reject(error)
-        }
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(file);
+
+      fileReader.onload = () => {
+        resolve(fileReader.result)
+      }
+      fileReader.onerror = (error) => {
+        reject(error)
+      }
     })
   }
 
-  const Upload=async(e)=>{
+  const Upload = async (e) => {
     e.preventDefault()
-  
-    Photo=await convertToBase64(e.target.files[0])
+
+    Photo = await convertToBase64(e.target.files[0])
     console.log(Photo);
   }
 
-  const Getdata=(e)=>{ 
+  const Getdata = (e) => {
     // console.log(e.target.value);
-    setVal((pre)=>({...pre,[e.target.name]:e.target.value}))
+    setVal((pre) => ({ ...pre, [e.target.name]: e.target.value }))
     // console.log(val);
   }
 
-  const AddStudent=async(e)=>{
+  const AddStudent = async (e) => {
     e.preventDefault()
-   try {
-    const res=await axios.post("http://localhost:3041/college/addstudent",{...val,photo:Photo,staff:username})
-    console.log(res.data);
-    if(res.status!==404){
-      navigate("/staffhome")
-      alert("Seccussfully registerd")
-     }
-   } catch (error) {
-    alert("error",error)
-   }
-   
-    
+    try {
+      const res = await axios.post("http://localhost:3041/college/addstudent", { ...val, photo: Photo, staff: username })
+      console.log(res.data);
+      if (res.status !== 404) {
+        navigate("/staffhome")
+        alert("Seccussfully registerd")
+      }
+    } catch (error) {
+      alert("error", error)
+    }
+
+
   }
- 
+
 
   return (
     <div>
-      {username}
-       <div className="studentreg-mainn">
+      <div className='usr'>{username}</div>
+      <div className="studentreg-mainn">
         <div className="studentreg-card">
-            <div className="student-reg-card-heading"><h4>Student Register</h4></div>
-          <form action="" className='student-reg-form'> 
-          <div> 
-            <input type="text" placeholder='Student ID' name='studentid' onChange={Getdata}/>
-            <input type="text" placeholder='Full Name' name='name' onChange={Getdata}/>
-          </div>
+          <div className="student-reg-card-heading"><h4>Student Register</h4></div>
+          <form action="" className='student-reg-form'>
             <div>
-              <input type="text" placeholder='Username' name='username' onChange={Getdata}/>
-              <input type="password"  placeholder='Password' name='password' onChange={Getdata}/>
-              </div>
-              <div>
-              <input type="text" placeholder='E mail'  name='email' onChange={Getdata}/>
-              <input type="password"  placeholder='Phone' name='phone' onChange={Getdata}/>
-              </div>
-              <div><input type="text" placeholder='Address' className='address' name='address'onChange={Getdata} /></div>
-            <div><input type="date" placeholder='Date Of Birth' name='dob' onChange={Getdata}/>
-            <select name="course" id="" onChange={Getdata}>
-              <option value="Select Course">Select Course</option>
-              <option value="Computer Science">Computer Science</option>
-              <option value="BA English">BA English</option>
-              <option value="BBA">BBA</option>
-              <option value="B Com">B Com</option>
+              <input type="text" placeholder='Student ID' name='studentid' onChange={Getdata} />
+              <input type="text" placeholder='Full Name' name='name' onChange={Getdata} />
+            </div>
+            <div>
+              <input type="text" placeholder='Username' name='username' onChange={Getdata} />
+              <input type="password" placeholder='Password' name='password' onChange={Getdata} />
+            </div>
+            <div>
+              <input type="text" placeholder='E mail' name='email' onChange={Getdata} />
+              <input type="password" placeholder='Phone' name='phone' onChange={Getdata} />
+            </div>
+            <div><input type="text" placeholder='Address' className='address' name='address' onChange={Getdata} /></div>
+            <div><input type="date" placeholder='Date Of Birth' name='dob' onChange={Getdata} />
+              <select name="course" id="" onChange={Getdata}>
+                <option value="Select Course">Select Course</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="BA English">BA English</option>
+                <option value="BBA">BBA</option>
+                <option value="B Com">B Com</option>
               </select>
-              </div>
+            </div>
             <div>
-              <input type="text" placeholder='Batch' className='batch-sem-at' name='batch' onChange={Getdata}/>
+              <input type="text" placeholder='Batch' className='batch-sem-at' name='batch' onChange={Getdata} />
               {/* <input type="text" placeholder='Semester' className='batch-sem-at'/> */}
               <select name="sem" id="" className='batch-sem-at' onChange={Getdata}>
-              <option value="select sem">Select sem</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
+                <option value="select sem">Select sem</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
               </select>
-              <input type="text" placeholder='Attendance out of 200 working days' className='batch-sem-at' name='attandance' onChange={Getdata}/>
-              </div>
-             <div className="internal"><label htmlFor="">Internal Marks</label></div>
-              <div className='internal-mark'>
-                <label htmlFor="">Chemistry : </label>
-                <input type="text" className='sub-mark' name='internalChe' onChange={Getdata}/>
-                <label htmlFor="">Physics : </label>
-                <input type="text" className='sub-mark' name='internalPhy' onChange={Getdata}/>
-                <label htmlFor="">Maths : </label>
-                <input type="text" className='sub-mark' name='internalMath' onChange={Getdata}/>
-              </div>
-              <div className="internal"><label htmlFor="">Test Score</label></div>
-              <div className='internal-mark'>
-                <label htmlFor="">Chemistry : </label>
-                <input type="text" className='sub-mark' name='testChe' onChange={Getdata}/>
-                <label htmlFor="">Physics : </label>
-                <input type="text" className='sub-mark' name='testPhy' onChange={Getdata}/>
-                <label htmlFor="">Maths : </label>
-                <input type="text" className='sub-mark' name='testMath' onChange={Getdata}/>
-              </div>
-              <div>
-                <input type="file" className='file' name='photo' onChange={Upload} />
-              </div>
-              <div className='stude-dp'><img src={val.photo} alt="" /></div>
+              <input type="text" placeholder='Attendance out of 200 working days' className='batch-sem-at' name='attandance' onChange={Getdata} />
+            </div>
+            <div className="internal"><label htmlFor="">Internal Marks</label></div>
+            <div className='internal-mark'>
+              <label htmlFor="">Chemistry : </label>
+              <input type="text" className='sub-mark' name='internalChe' onChange={Getdata} />
+              <label htmlFor="">Physics : </label>
+              <input type="text" className='sub-mark' name='internalPhy' onChange={Getdata} />
+              <label htmlFor="">Maths : </label>
+              <input type="text" className='sub-mark' name='internalMath' onChange={Getdata} />
+            </div>
+            <div className="internal"><label htmlFor="">Test Score</label></div>
+            <div className='internal-mark'>
+              <label htmlFor="">Chemistry : </label>
+              <input type="text" className='sub-mark' name='testChe' onChange={Getdata} />
+              <label htmlFor="">Physics : </label>
+              <input type="text" className='sub-mark' name='testPhy' onChange={Getdata} />
+              <label htmlFor="">Maths : </label>
+              <input type="text" className='sub-mark' name='testMath' onChange={Getdata} />
+            </div>
+            <div>
+              <input type="file" className='file' name='photo' onChange={Upload} />
+            </div>
+            <div className='stude-dp'><img src={val.photo} alt="" /></div>
             <button onClick={AddStudent}>Register</button>
-            </form>
-       
-            {/* <div  className='admn-reg-ihave-ac'><Link to='/studentlogin'>I have an account</Link></div> */}
+          </form>
+
+          {/* <div  className='admn-reg-ihave-ac'><Link to='/studentlogin'>I have an account</Link></div> */}
         </div>
       </div>
     </div>

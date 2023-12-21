@@ -1,24 +1,29 @@
+.usr{
+    text-align: center;
+    font-size:22px;
+    color: blue;
+}
 .studentreg-mainn{
-    background: #2e3047;
-    height: 92vh;
-    padding-top: 3%;
+    background: #fff;
+    height: 100vh;
+    padding-top: 1.5%;
     padding-bottom: 4%;
 }
 .student-reg-card-heading{
     text-align: center;
 }
 .studentreg-card{
-    border: 2px solid #53d3d1;
-    background-color:#2e3047 ;
-    width: 70%;
+    border: 2px solid #58082c;
+    background-color:rgba(206, 252, 136, 0.981);
+    width: 60%;
     height: auto;
     margin: auto;
     border-radius: 8px;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 50px !important;
 }
 .studentreg-card h4{
-    color: #53d3d1;
+    color: #58082c;
     font-weight: 800;
 }
 .student-reg-form{
@@ -27,9 +32,9 @@
 }
 .student-reg-form input{
     background-color: transparent;
-    border: 2px solid #53d3d1 !important ;
-    margin-top: 20px;
-    color: #53d3d1;
+    border: 2px solid #063c3b !important ;
+    margin-top: 13px;
+    color: #58082c;
     width: 40%;
     margin-right: 10px;
     height: 40px;
@@ -41,9 +46,9 @@
 }
 .student-reg-form select{
     background-color: transparent;
-    border: 2px solid #53d3d1 !important ;
-    margin-top: 20px;
-    color: #53d3d1;
+    border: 2px solid #58082c !important ;
+    margin-top: 13px;
+    color: #58082c;
     width: 40%;
     margin-right: 10px;
     height: 40px;
@@ -51,32 +56,32 @@
     border-radius: 5px;
 }
 .studentreg-card button{
-    background-color: #53d3d1;
-    border: 2px solid #53d3d1 ;
-    color: #2e3047;
+    background-color: #490736;
+    border: 2px solid #063332 ;
+    color: #ffffff;
     font-weight: 800;
-    margin-top: 20px;
+    margin-top: 14px;
     padding: 5px 16px;
     border-radius: 5px;
 }
 .internal{
     text-align: start;
     padding-left: 9%;
-    margin-top: 10px;
-    color: #53d3d1;
+    margin-top: 7px;
+    color: #052b2a;
 }
 .sub-mark{
     width: 10% !important;
     margin-left: 4px;
 }
 label{
-    color: #53d3d1;
+    color: #083736;
 }
 .address{
     width: 81% !important;
 }
 .internal-mark{
-    height: 80px;
+    height: 60px;
     width: 81%;
     border-radius: 5px;
     margin: auto;

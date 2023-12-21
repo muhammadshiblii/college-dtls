@@ -1,5 +1,5 @@
 .staffreg-main{
-    background: #2e3047;
+    background: #efebe0;
     height: 92vh;
     padding-top: 1%;
 }
@@ -8,7 +8,7 @@
 }
 .staffreg-card{
     /* border: 2px solid #53d3d1; */
-    background-color:#2e3047 ;
+    background-color:rgba(206, 252, 136, 0.981) ;
     width: 70%;
     height: auto;
     margin: auto;
@@ -22,7 +22,7 @@
    padding-right: 50px;
 }
 .admin-logout span{
-    color: #53d3d1;
+    color: #540633;
     padding: 0;
 }
 .admin-logout{
@@ -44,7 +44,7 @@
     border: 1px solid #53d3d1;
 }
 .staffreg-card h4{
-    color: #53d3d1;
+    color: #540633;
     font-weight: 800;
 }
 .staff-reg-form{
@@ -53,20 +53,20 @@
 }
 .staff-reg-form input{
     background-color: transparent;
-    border: 2px solid #53d3d1 ;
+    border: 2px solid #063c3b ;
     margin-top: 20px;
-    color: #53d3d1;
+    color: #58082c;
     width: 30%;
     margin-right: 10px;
     height: 40px;
-    color: white;
+    color: black;
     padding: 10px;
     padding-left: 10px;
     border-radius: 5px;
 }
 .staffreg-card button{
-    background-color: #53d3d1;
-    border: 2px solid #53d3d1 ;
+    background-color: #490736;
+    border: 2px solid #063332 ;
     color: white;
     margin-top: 20px;
     padding: 5px 16px;
@@ -76,7 +76,7 @@
     text-align: center;
     margin-top: 20px;
 }
-.file{
-    border: none !important;
+.filee{
+    border: 1px solid black !important;
     color: white;
 }
